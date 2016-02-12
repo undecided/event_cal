@@ -82,7 +82,7 @@ $line_height: 1.5 !default;
 }
 .calendar.monthly {
   @include clearfix;
-  @include box-shadow(0 2px 5px lighten($light_gray, 10%));
+  box-shadow: 0 2px 5px lighten($light_gray, 10%);
   border-top: $calendar_border_attributes;
   border-bottom: $calendar_border_attributes;
   background: $white;
@@ -165,14 +165,14 @@ $line_height: 1.5 !default;
     vertical-align: top;
     color: $dark_gray;
     &.has_events {
-      @include box-shadow(0 0 1.5px 1px lighten($event_highlight_color, 18%) inset);
+      box-shadow: 0 0 1.5px 1px lighten($event_highlight_color, 18%) inset;
       background-color: lighten($event_highlight_color, 20%);
       font-weight: bold;
     }
     &.has_events:hover,
     &.has_events:hover .sunday,
     &.has_events:hover .saturday {
-      @include box-shadow(none);
+      box-shadow: none;
       background-color: $green;
       color: $white;
       .event {
@@ -180,7 +180,7 @@ $line_height: 1.5 !default;
       }
     }
     &.selected {
-      @include box-shadow(none);
+      box-shadow: none;
       background-color: lighten($event_highlight_color, 10%);
       font-weight: bold;
     }
